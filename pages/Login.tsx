@@ -4,6 +4,7 @@ import { Input, Button, Icon } from 'react-native-elements';
 import {API_URL} from "@env";
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default Login = ({ navigation }) => {
     const [getUsername, setUsername] = useState('');
@@ -48,15 +49,15 @@ export default Login = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Icon
-                name='sc-telegram'
-                type='evilicon'
+                name='cogs'
+                type='font-awesome-5'
                 color='#517fa4'
-                size={150}
+                size={200}
             />
-            <Input placeholder='Username' onChangeText={(e) => setUsername(e)} />
+            <Input placeholder='Username' onChangeText={(e) => setUsername(e)} style={{ marginTop:20}}/>
             <Input placeholder='Password' secureTextEntry={true} onChangeText={(e) => setPassword(e)} />
             <Button title='Login' onPress={ () => login() } />
-            <View style={{ alignItems: 'center', marginTop: 10}}>
+            <View style={{ alignItems: 'center', marginTop: 15}}>
                 <Text style={{color: 'gray'}} onPress={() => navigation.navigate('Register')}>Register</Text>
             </View>
         </View>
@@ -68,6 +69,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         marginLeft: '10%',
-        marginRight: '10%'
+        marginRight: '10%',
     }
 });

@@ -45,6 +45,7 @@ export default ShowMechanicComponent = ({route, navigation}) => {
                         firstname: route.params.first_name,
                         lastname: route.params.last_name,
                     }) } />
+                    <Text style={{textAlign:'center'}}>Location</Text>
                 </View>
 
                 <View style={{ alignItems: 'center' }}>

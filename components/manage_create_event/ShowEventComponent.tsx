@@ -79,7 +79,7 @@ export default ShowEventComponent = () => {
                                 <View key={i} style={{ marginLeft: 10, marginRight: 10 }}>
                                     <View style={{ flexDirection: 'row', marginBottom: 10 }}>
                                         <View style={{ width: '50%' }}>
-                                            <Text style={{ marginLeft: 5, marginBottom: 10, marginTop: 10 }} onPress={() => navigation.navigate('View event', {
+                                            <Text style={{ marginLeft: 5, marginBottom: 10, marginTop: 10, fontSize:18 }} onPress={() => navigation.navigate('View event', {
                                                 title: u.title,
                                                 content: u.content,
                                                 myimage: `${API_URL}/storage/${u.myimage}`,
@@ -92,13 +92,13 @@ export default ShowEventComponent = () => {
                                         </View>
 
                                         <View style={{ width: "40%" }}>
-                                            <Text style={{ marginLeft: 5, marginBottom: 10, marginTop: 10 }}>
+                                            <Text style={{ marginLeft: 5, marginBottom: 10, marginTop: 10, fontSize:18 }}>
                                                 {u.date_create}
                                             </Text>
                                         </View>
 
                                         <View style={{ width: "10%" }}>
-                                            <Text style={{ marginLeft: 5, marginBottom: 10, marginTop: 10, color: 'red' }} onPress={() => getDelete(u.id)} >
+                                            <Text style={{ marginLeft: 5, marginBottom: 10, marginTop: 10, color: 'red', fontSize:18 }} onPress={() => getDelete(u.id)} >
                                                 Del
                                             </Text>
                                         </View>

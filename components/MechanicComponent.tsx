@@ -68,7 +68,7 @@ export default MechanicComponent = () => {
                                             <View>
                                                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                                                     <View style={{ width: '50%' }}>
-                                                        <Text style={{ marginBottom: 15, marginLeft: 10, marginRight: 10 }} onPress={() => navigation.navigate('Show mechanic', {
+                                                        <Text style={{ marginBottom: 15, marginLeft: 10, marginRight: 10, fontSize:18 }} onPress={() => navigation.navigate('Show mechanic', {
                                                             first_name: u.data_event_relation.first_name,
                                                             last_name: u.data_event_relation.last_name,
                                                             email: u.data_event_relation.email,
@@ -85,7 +85,7 @@ export default MechanicComponent = () => {
                                                     </View>
 
                                                     <View style={{ width: '50%' }}>
-                                                        <Text style={{ marginBottom: 15, marginLeft: 10, marginRight: 10 }}>{u.date_create}</Text>
+                                                        <Text style={{ marginBottom: 15, marginLeft: 10, marginRight: 1, fontSize:18 }}>{u.date_create}</Text>
                                                     </View>
                                                 </View>
                                                 <Card.Divider />

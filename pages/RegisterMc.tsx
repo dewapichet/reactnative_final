@@ -129,19 +129,19 @@ export default RegisterMc = ({ navigation }) => {
                     style={{ ...pickerSelectStyles }}
                 />
 
-                <View style={{ alignItems: 'center' }}>
-                    <Icon name='camera' type='material' size={50} onPress={pickImagePassport} />
-                    <Text>Passport image</Text>
-                    {getImagePassport && <Image source={{ uri: getImagePassport }} style={{ width: 200, height: 200 }} />}
+                <View style={{ alignItems: 'center', marginTop:30 }}>
+                    <Icon name='camera-retro' type='font-awesome-5' size={50} onPress={pickImagePassport} />
+                    <Text style={{marginTop:5, fontSize:18}}>Passport image</Text>
+                    {getImagePassport && <Image source={{ uri: getImagePassport }} style={{ width: 200, height: 200, marginTop:10 }} />}
                 </View>
 
-                <View style={{ alignItems: 'center' }}>
-                    <Icon name='camera' type='material' size={50} onPress={pickImageCertificate} />
-                    <Text>Passport Certificate</Text>
-                    {getImageCertificate && <Image source={{ uri: getImageCertificate }} style={{ width: 200, height: 200 }} />}
+                <View style={{ alignItems: 'center', marginTop:18}}>
+                    <Icon name='camera-retro' type='font-awesome-5' size={50} onPress={pickImageCertificate} />
+                    <Text style={{marginTop:5, fontSize:20}}>Passport Certificate</Text>
+                    {getImageCertificate && <Image source={{ uri: getImageCertificate }} style={{ width: 200, height: 200, marginTop:10}} />}
                 </View>
 
-                <Button title='Register' onPress={ () => register() } />
+                <Button title='Register' onPress={ () => register() } style={{marginTop:30}} />
             </ScrollView>
         </View>
     )
@@ -167,9 +167,10 @@ const pickerSelectStyles = StyleSheet.create({
         // borderRadius: 4,
         // backgroundColor: 'white',
         // color: 'black',
+        marginTop:5,
         color: 'black'
     },
     inputAndroid: {
         color: 'black'
-    }
+    }   
 });

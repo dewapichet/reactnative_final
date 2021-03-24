@@ -96,14 +96,14 @@ export default CreateEventComponent = ({ route, navigation }) => {
 
                     </View>
 
-                    <Icon type='material' name='camera' size={45} onPress={() => navigation.navigate('Camera')} />
+                    <Icon type='font-awesome-5' name='camera-retro' size={45} onPress={() => navigation.navigate('Camera')} style={{marginTop:30}} />
                     
                     {
                         route.params !== undefined ? (
                             <View>
                                 <Image
                                     source={{ uri: Platform.OS === "android" ? route.params.photo : route.params.photo.replace('file://', '') }}
-                                    style={{ width: '100%', height: 250, resizeMode: 'contain', marginBottom: 20 }}
+                                    style={{ width: '100%', height: 250, resizeMode: 'contain', marginBottom: 20, marginTop:5 }}
                                 />
 
                         <Button title='Submit' onPress={ () => create_event() }

@@ -71,16 +71,14 @@ export default Menu = ({ navigation }) => {
                         </Card>
                     ) : (
                         <Card>
-                            <View style={{ flexDirection: 'row', marginBottom: 15, marginTop: 5 }} >
+                            <View style={{ flexDirection: 'row'}} >
                                 <View style={{ width: '50%', alignItems: 'flex-start' }}>
                                     <Icon type="material" name='logout' onPress={() => Logout()} />
                                 </View>
-    
-                                <View style={{ width: '50%', alignItems: 'flex-start' }}>
-                                    <Text>Logout</Text>
+                                <View style={{ width: '50%', alignItems: 'flex-start', marginTop:3 }}>
+                                    <Text style={{fontSize:17}}>Logout</Text>
                                 </View>
                             </View>
-                            <Card.Divider />
                         </Card>
                     )
                 ) : (

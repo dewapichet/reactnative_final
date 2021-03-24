@@ -106,13 +106,13 @@ export default RegisterMember = ({ navigation }) => {
                     style={{ ...pickerSelectStyles }}
                 />
 
-                <View style={{ alignItems: 'center' }}>
-                    <Icon name='camera' type='material' size={50} onPress={pickImageProfile} />
-                    <Text>Profile image</Text>
-                    {getImageProfile && <Image source={{ uri: getImageProfile }} style={{ width: 200, height: 200 }} />}
+                <View style={{ alignItems: 'center' , marginTop:30}}>
+                    <Icon name='user-circle' type='font-awesome-5' size={50} onPress={pickImageProfile} />
+                    <Text style={{marginTop:5, fontSize:18}}>Profile image</Text>
+                    {getImageProfile && <Image source={{ uri: getImageProfile }} style={{ width: 200, height: 200, marginTop:10 }} />}
                 </View>
 
-                <Button title='Register' onPress={ () => register() } />
+                <Button title='Register' onPress={ () => register() }  style={{marginTop:30}}/>
             </ScrollView>
         </View>
     )
@@ -138,6 +138,7 @@ const pickerSelectStyles = StyleSheet.create({
         // borderRadius: 4,
         // backgroundColor: 'white',
         // color: 'black',
+        marginTop:5,
         color: 'black'
     },
     inputAndroid: {
